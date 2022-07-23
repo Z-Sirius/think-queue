@@ -83,6 +83,7 @@ abstract class Connector
             'maxTries' => null,
             'timeout'  => null,
             'data'     => $data,
+            "attempts" => 1
         ];
     }
 
@@ -97,6 +98,7 @@ abstract class Connector
                 'commandName' => get_class($job),
                 'command'     => serialize(clone $job),
             ],
+            "attempts" => 1
         ];
     }
 
